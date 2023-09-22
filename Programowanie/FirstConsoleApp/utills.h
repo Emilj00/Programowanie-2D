@@ -1,10 +1,9 @@
-#pragma once
+using ushort = unsigned short;
+using uint = unsigned int;
+using ulong = unsigned long;
 
 void printHeader(std::string textToPrint);
 
-/// <summary>
-/// Shows message in console and gets input from user
-/// </summary>
-/// <param name="message"></param>
-/// <returns></returns>
-double getDoubleFormUser(std::string message);
+int getIntFromUser(std::string message);
+double getDoubleFromUser(std::string message);
+std::string getStringFromUser(std::string message);
