@@ -16,15 +16,7 @@ void task8();
 void task9();
 
 int main() {
-	task1();
-	task2();
-	task3();
-	task4();
-	task5();
-	task6();
 	task7();
-	task8();
-	task9();
 }
 
 
@@ -35,15 +27,15 @@ Podstawy programowania:
 	2. Program obliczaj¹cy pole prostok¹ta.
 	3. Program obliczaj¹cy objêtoœæ sto¿ka.
 	4. Program obliczaj¹cy pole ko³a.
-	5. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
-	6. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
-	7. Program obliczaj¹cy objêtoœæ kuli o promieniu r
-	8. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
+	5. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2.
+	6. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h.
+	7. Program obliczaj¹cy objêtoœæ kuli o promieniu r.
+	8. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h.
 	9. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 */
 
 /// <summary>
-/// Srednia dwoch liczb
+/// Program obliczaj¹cy œredni¹ dwóch liczb.
 /// </summary>
 void task1() {
 	printHeader("Srednia 2 liczb");
@@ -56,7 +48,7 @@ void task1() {
 }
 
 /// <summary>
-/// Pole prostakata
+/// Program obliczaj¹cy pole prostok¹ta.
 /// </summary>
 void task2() {
 	printHeader("Pole prostokata");
@@ -69,7 +61,7 @@ void task2() {
 }
 
 /// <summary>
-/// Objetosc stozka
+/// Program obliczaj¹cy objêtoœæ sto¿ka.
 /// </summary>
 void task3() {
 	printHeader("Objetosc stozka");
@@ -83,7 +75,7 @@ void task3() {
 
 
 /// <summary>
-/// Pole kola
+/// Program obliczaj¹cy pole ko³a.
 /// </summary>
 void task4() {
 	printHeader("Pole kola");
@@ -95,7 +87,7 @@ void task4() {
 }
 
 /// <summary>
-/// Wyrazenie a^2 + b^2
+/// Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2.
 /// </summary>
 void task5() {
 	printHeader("Wyrazenie a^2 + b^2");
@@ -111,7 +103,7 @@ void task5() {
 }
 
 /// <summary>
-/// Pole trojkata
+/// Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h.
 /// </summary>
 void task6() {
 	printHeader("Pole trojkata");
@@ -124,19 +116,19 @@ void task6() {
 }
 
 /// <summary>
-/// Pole kuli
+/// Program obliczaj¹cy objêtoœæ kuli o promieniu r.
 /// </summary>
 void task7() {
 	printHeader("Pole kuli");
 
 	double radiusFromUser = getDoubleFromUser("Podaj promien kuli: ");
 
-	double areaOfSphere = 4 * M_PI * pow(radiusFromUser, 2);
+	double areaOfSphere = 4.0 / 3.0 * M_PI * pow(radiusFromUser, 3);
 	std::cout << "Pole kola to: " << areaOfSphere << std::endl;
 }
-
+ 
 /// <summary>
-/// Pole trapezu
+/// Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h.
 /// </summary>
 void task8() {
 	printHeader("Pole trapezu");
@@ -150,7 +142,7 @@ void task8() {
 }
 
 /// <summary>
-/// Srednia 3 liczb
+/// Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 /// </summary>
 void task9() {
 	printHeader("Srednia wazona 3 liczb");
