@@ -16,7 +16,7 @@ void task8();
 void task9();
 
 int main() {
-	task7();
+	task9();
 }
 
 
@@ -162,6 +162,6 @@ void task9() {
 
 	double sumOfWeights = weightOfFirstNumber + weightOfSecondNumber + weigthOfThirdNumber;
 
-	double result = sumOfThreeNumbers / weightOfFirstNumber;
+	double result = sumOfThreeNumbers / sumOfWeights;
 	std::cout << "Srednia wazona 3 liczb to: " << result << std::endl;
 }
