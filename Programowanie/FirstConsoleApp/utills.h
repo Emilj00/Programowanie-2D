@@ -1,9 +1,5 @@
-using ushort = unsigned short;
-using uint = unsigned int;
-using ulong = unsigned long;
+extern void printHeader(std::string textToPrint);
 
-void printHeader(std::string textToPrint);
-
-int getIntFromUser(std::string message);
-double getDoubleFromUser(std::string message);
-std::string getStringFromUser(std::string message);
+extern int getIntFromUser(std::string message);
+extern double getDoubleFromUser(std::string message);
+extern std::string getStringFromUser(std::string message);
