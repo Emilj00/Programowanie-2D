@@ -1,5 +1,5 @@
-extern void printHeader(std::string textToPrint);
+void printHeader(std::string textToPrint);
 
-extern int getIntFromUser(std::string message);
-extern double getDoubleFromUser(std::string message);
-extern std::string getStringFromUser(std::string message);
+int getIntFromUser(std::string message);
+double getDoubleFromUser(std::string message);
+std::string getStringFromUser(std::string message);
