@@ -16,7 +16,7 @@ void task8();
 void task9();
 
 int main() {
-	task7();
+	task9();
 }
 
 
