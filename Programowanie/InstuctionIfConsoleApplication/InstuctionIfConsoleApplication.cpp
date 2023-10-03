@@ -1,15 +1,15 @@
 #include <iostream>
 
-#include "utills.h"
+#include "..\Utills\Utills.h"
 
 /// <summary>
 /// Napisz funkcje która podzieli dwie liczby
 /// </summary>
 void task1() {
-    printHeader("Dzielenie dwoch liczb");
+    Utills::Console::PrintHeader("Dzielenie dwoch liczb");
 
-    double firstNumber = getDoubleFromUser("Podaj dzielna: "),
-        secondNumber = getDoubleFromUser("Podaj dzielnik: ");
+    double firstNumber = Utills::Console::GetDoubleFromUser("Podaj dzielna: "),
+        secondNumber = Utills::Console::GetDoubleFromUser("Podaj dzielnik: ");
 
     if (secondNumber == 0) {
         std::cout << "Nie mozna dzielic przez 0!!";

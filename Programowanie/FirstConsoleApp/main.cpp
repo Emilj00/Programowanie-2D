@@ -3,7 +3,7 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-#include "utills.h"
+#include "..\Utills\Utills.h"
 
 void task1();
 void task2();
@@ -38,10 +38,10 @@ Podstawy programowania:
 /// Program obliczaj¹cy œredni¹ dwóch liczb.
 /// </summary>
 void task1() {
-	printHeader("Srednia 2 liczb");
+	Utills::Console::PrintHeader("Srednia 2 liczb");
 
-	double firstNumberFromUser = getDoubleFromUser("Podaj 1 liczbe: "),
-		secondNumberFromUser = getDoubleFromUser("Podaj 2 liczbe: ");
+	double firstNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj 1 liczbe: "),
+		secondNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj 2 liczbe: ");
 
 	double avgOfTwoNumbers = (firstNumberFromUser + secondNumberFromUser) / 2.0;
 	std::cout << "Srednia to: " << avgOfTwoNumbers << std::endl;
@@ -51,10 +51,10 @@ void task1() {
 /// Program obliczaj¹cy pole prostok¹ta.
 /// </summary>
 void task2() {
-	printHeader("Pole prostokata");
+	Utills::Console::PrintHeader("Pole prostokata");
 
-	double heightFromUser = getDoubleFromUser("Podaj podstawe prostokata: "),
-		baseFormUser = getDoubleFromUser("Podaj wysokosc prostokata: ");
+	double heightFromUser = Utills::Console::GetDoubleFromUser("Podaj podstawe prostokata: "),
+		baseFormUser = Utills::Console::GetDoubleFromUser("Podaj wysokosc prostokata: ");
 
 	double areaOfRectangle = baseFormUser * heightFromUser;
 	std::cout << "Pole prostakata to: " << areaOfRectangle << std::endl;
@@ -64,10 +64,10 @@ void task2() {
 /// Program obliczaj¹cy objêtoœæ sto¿ka.
 /// </summary>
 void task3() {
-	printHeader("Objetosc stozka");
+	Utills::Console::PrintHeader("Objetosc stozka");
 
-	double heightFromUser = getDoubleFromUser("Podaj promien stozka: "),
-		radiusFromUser = getDoubleFromUser("Podaj wysokosc stozka: ");
+	double heightFromUser = Utills::Console::GetDoubleFromUser("Podaj promien stozka: "),
+		radiusFromUser = Utills::Console::GetDoubleFromUser("Podaj wysokosc stozka: ");
 
 	double volumeOfCone = 1.0 / 3.0 * M_PI * pow(radiusFromUser, 2) * heightFromUser;
 	std::cout << "Objetosc stozka: " << volumeOfCone << std::endl;
@@ -78,9 +78,9 @@ void task3() {
 /// Program obliczaj¹cy pole ko³a.
 /// </summary>
 void task4() {
-	printHeader("Pole kola");
+	Utills::Console::PrintHeader("Pole kola");
 
-	double radiusFromUser = getDoubleFromUser("Podaj promien kola: ");
+	double radiusFromUser = Utills::Console::GetDoubleFromUser("Podaj promien kola: ");
 
 	double areaOfCircle = M_PI * pow(radiusFromUser, 2);
 	std::cout << "Pole kola to: " << areaOfCircle << std::endl;
@@ -90,10 +90,10 @@ void task4() {
 /// Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2.
 /// </summary>
 void task5() {
-	printHeader("Wyrazenie a^2 + b^2");
+	Utills::Console::PrintHeader("Wyrazenie a^2 + b^2");
 
-	double firstNumberFromUser = getDoubleFromUser("Podaj 1 liczbe: "),
-		secondNumberFromUser = getDoubleFromUser("Podaj 2 liczbe: ");
+	double firstNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj 1 liczbe: "),
+		secondNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj 2 liczbe: ");
 
 	double firstNumberToPowerOfTwo = pow(firstNumberFromUser, 2),
 		secondNumberToPowerOfTwo = pow(secondNumberFromUser, 2);
@@ -106,10 +106,10 @@ void task5() {
 /// Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h.
 /// </summary>
 void task6() {
-	printHeader("Pole trojkata");
+	Utills::Console::PrintHeader("Pole trojkata");
 
-	double heightFromUser = getDoubleFromUser("Podaj wysokosc : "),
-		baseFromUser = getDoubleFromUser("Podaj podstawe trojkata: ");
+	double heightFromUser = Utills::Console::GetDoubleFromUser("Podaj wysokosc : "),
+		baseFromUser = Utills::Console::GetDoubleFromUser("Podaj podstawe trojkata: ");
 
 	double areaOfTriangle = heightFromUser * baseFromUser * 1.0 / 2.0;
 	std::cout << "Pole trojkata: " << areaOfTriangle << std::endl;
@@ -119,9 +119,9 @@ void task6() {
 /// Program obliczaj¹cy objêtoœæ kuli o promieniu r.
 /// </summary>
 void task7() {
-	printHeader("Pole kuli");
+	Utills::Console::PrintHeader("Pole kuli");
 
-	double radiusFromUser = getDoubleFromUser("Podaj promien kuli: ");
+	double radiusFromUser = Utills::Console::GetDoubleFromUser("Podaj promien kuli: ");
 
 	double areaOfSphere = 4.0 / 3.0 * M_PI * pow(radiusFromUser, 3);
 	std::cout << "Pole kola to: " << areaOfSphere << std::endl;
@@ -131,11 +131,11 @@ void task7() {
 /// Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h.
 /// </summary>
 void task8() {
-	printHeader("Pole trapezu");
+	Utills::Console::PrintHeader("Pole trapezu");
 
-	double firstBaseFromUser = getDoubleFromUser("Podaj pierwsza podstawe: "),
-		secondBaseFromUser = getDoubleFromUser("Podaj druga podstawe: "),
-		heigthFromUser = getDoubleFromUser("Podaj wysokosc podstawe: ");
+	double firstBaseFromUser = Utills::Console::GetDoubleFromUser("Podaj pierwsza podstawe: "),
+		secondBaseFromUser = Utills::Console::GetDoubleFromUser("Podaj druga podstawe: "),
+		heigthFromUser = Utills::Console::GetDoubleFromUser("Podaj wysokosc podstawe: ");
 
 	double areaOftrapeze = (firstBaseFromUser + secondBaseFromUser) * heigthFromUser * 1.0 / 2.0;
 	std::cout << "pole trapezu to: " << areaOftrapeze << std::endl;
@@ -145,16 +145,16 @@ void task8() {
 /// Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 /// </summary>
 void task9() {
-	printHeader("Srednia wazona 3 liczb");
+	Utills::Console::PrintHeader("Srednia wazona 3 liczb");
 
-	double firstNumberFromUser = getDoubleFromUser("Podaj pierwsza liczbe: "),
-		weightOfFirstNumber = getDoubleFromUser("Podaj wage pierwszej liczby: ");
+	double firstNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj pierwsza liczbe: "),
+		weightOfFirstNumber = Utills::Console::GetDoubleFromUser("Podaj wage pierwszej liczby: ");
 
-	double secondNumberFromUser = getDoubleFromUser("Podaj druga liczbe: "),
-		weightOfSecondNumber = getDoubleFromUser("Podaj wage drugiej liczby: ");
+	double secondNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj druga liczbe: "),
+		weightOfSecondNumber = Utills::Console::GetDoubleFromUser("Podaj wage drugiej liczby: ");
 
-	double thirdNumberFromUser = getDoubleFromUser("Podaj trzecia liczbe: "),
-		weigthOfThirdNumber = getDoubleFromUser("Podaj wage trzeciej liczby: ");
+	double thirdNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj trzecia liczbe: "),
+		weigthOfThirdNumber = Utills::Console::GetDoubleFromUser("Podaj wage trzeciej liczby: ");
 
 	double sumOfThreeNumbers = firstNumberFromUser * weightOfFirstNumber +
 		secondNumberFromUser * weightOfSecondNumber +
