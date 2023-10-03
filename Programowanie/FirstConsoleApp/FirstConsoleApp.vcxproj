@@ -133,6 +133,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Users\Uczeń - sala 213\Downloads\utills.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utills\Utills.vcxproj">
+      <Project>{ba8694bc-6643-4667-bc75-1cd1cae62f27}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

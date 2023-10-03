@@ -4,47 +4,45 @@
 #include "pch.h"
 #include "framework.h"
 
+
 #include "Utills.h"
 
-#include <string>
 #include <iostream>
+#include <string>
 
-static class Utills {
+double Utills::Console::GetDoubleFromUser(std::string message)
+{
+	std::cout << message;
 
-public:
-	static class Console {
+	double input;
+	std::cin >> input;
 
-	public:
-		static double GetDoubleFromUser(std::string message) {
-			std::cout << message;
+	return input;
+}
 
-			double input;
-			std::cin >> input;
+int Utills::Console::GetIntFromUser(std::string message)
+{
+	std::cout << message;
 
-			return input;
-		}
-		static int GetIntFromUser(std::string message) {
-			std::cout << message;
+	int input;
+	std::cin >> input;
 
-			int input;
-			std::cin >> input;
+	return input;
+}
 
-			return input;
-		}
-		static std::string GetStringFromUser(std::string message) {
-			std::cout << message;
+std::string Utills::Console::GetStringFromUser(std::string message)
+{
+	std::cout << message;
 
-			std::string input;
-			std::cin >> input;
+	std::string input;
+	std::cin >> input;
 
-			return input;
-		}
+	return input;
+}
 
-
-		static void PrintHeader(std::string message) {
-			std::cout << "==============================";
-			std::cout << message;
-			std::cout << "==============================";
-		}
-	};
-};
+void Utills::Console::PrintHeader(std::string message)
+{
+	std::cout << "==============================" << std::endl;;
+	std::cout << message << std::endl;
+	std::cout << "==============================" << std::endl;;
+}
