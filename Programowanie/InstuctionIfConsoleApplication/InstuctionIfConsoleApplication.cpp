@@ -29,6 +29,11 @@ void task0() {
 5. Program sprawdzaj¹cy czy podane has³o jest poprawne (np. jeœli has³o jest "abc123", program powinien wyœwietliæ "has³o poprawne", jeœli jest inne, powinien wyœwietliæ "has³o niepoprawne").
 6. Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)
 7. Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej temperatury (np. "ciep³o" dla temperatury powy¿ej 20 stopni Celsjusza, "ch³odno" dla temperatury poni¿ej 10 stopni Celsjusza itd.)
+
+11. Napisz program, który bêdzie dzia³aæ jako prosty kalkulator matematyczny, umo¿liwiaj¹c u¿ytkownikowi wybór operacji (dodawanie, odejmowanie, mno¿enie, dzielenie) i wprowadzanie liczb do obliczeñ.
+12. Napisz program, który wczyta numer miesi¹ca i wyœwietli jego s³owny odpowiednik.
+13. Napisz program, który na podstawie wspó³czynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwi¹zania rzeczywiste, i jeœli tak, to je obliczy.
+
 */
 
 /// <summary>
@@ -134,15 +139,11 @@ void task5() {
 
 
 bool isDateValid(int day, int month, int year) {
-	if (day < 0) {
+	if (day < 0 || month < 0 || month > 12) {
 		return false;
 	}
 
-	if (month < 0 || month > 12) {
-		return false;
-	}
-
-	if ((month % 2 != 0 && month <= 7) || (month % 2 == 0 && month >= 8)) {
+	if ((month % 2 != 0 && month <= 7) || (month % 2 == 0 && month >= 8)) { //1, 3, 6, 7, 8, 10, 12 
 		if (day > 31) {
 			return false;
 		}
@@ -245,7 +246,7 @@ void task10() {
 	double secondSideFromUser = Utills::Console::GetDoubleFromUser("Podaj drugi bok: ");
 	double thirdSideFromUser = Utills::Console::GetDoubleFromUser("Podaj trzeci bok: ");
 
-	if (firstSideFromUser + secondSideFromUser > thirdSideFromUser 
+	if (firstSideFromUser + secondSideFromUser > thirdSideFromUser
 		&& secondSideFromUser + thirdSideFromUser > firstSideFromUser
 		&& firstSideFromUser + thirdSideFromUser > secondSideFromUser) {
 		std::cout << "Trojkat jest poprawny!";
@@ -253,6 +254,72 @@ void task10() {
 	}
 
 	std::cout << "Trojkat jest niepoprawny!";
+}
+
+/// <summary>
+/// 11. Napisz program, który bêdzie dzia³aæ jako prosty kalkulator matematyczny, umo¿liwiaj¹c u¿ytkownikowi wybór operacji(dodawanie, odejmowanie, mno¿enie, dzielenie) i wprowadzanie liczb do obliczeñ.
+/// </summary>
+void task11() {
+	Utills::Console::PrintHeader("Kalkulator matematyczny");
+
+	std::cout << "1. Dodawanie" << std::endl;
+	std::cout << "2. Odejmowanie" << std::endl;
+	std::cout << "3. Mnozenie" << std::endl;
+	std::cout << "4. Dzielenie" << std::endl;
+	std::cout << std::endl;
+	std::cout << "Inne. Exit" << std::endl;
+
+	int actionChoice = Utills::Console::GetIntFromUser("Podaj operacje");
+
+	double firstNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj pierwsza liczbe: ");
+	double secondNumberFromUser = Utills::Console::GetDoubleFromUser("Podaj druga liczbe: ");
+
+	switch (actionChoice)
+	{
+	case 1:
+		std::cout << "Wynik dodwania to: " << firstNumberFromUser + secondNumberFromUser;
+		break;
+	case 2:
+		std::cout << "Wynik odejmowania to: " << firstNumberFromUser - secondNumberFromUser;
+		break;
+	case 3:
+		std::cout << "Wynik mnozenie to: " << firstNumberFromUser * secondNumberFromUser;
+		break;
+	case 4:
+		std::cout << "Wynik dzielenie to: " << firstNumberFromUser / secondNumberFromUser;
+		break;
+	default: return;
+	}
+}
+
+/// <summary>
+/// 12. Napisz program, który wczyta numer miesi¹ca i wyœwietli jego s³owny odpowiednik.
+/// </summary>
+void task12() {
+	Utills::Console::PrintHeader("Miesiace");
+
+	int monthNumberFromUser = Utills::Console::GetIntFromUser("Podaj number miesiaca: ");
+	std::string months[] = { "Styczen" , "Luty" , "Marzec" , "Kwiecien" , "Maj" , "Czerwiec" , "Lipiec" , "Sierpien" , "Wrzesien" , "Pazdziernik" , "Listopad" , "Grudzien" };
+
+	if (monthNumberFromUser < 1 || monthNumberFromUser > 12) {
+		std::cout << "Nie ma takiego miesiaca";
+		return;
+	}
+
+	std::cout << "Ten miesiac to: " << months[monthNumberFromUser - 1];
+}
+
+/// <summary>
+/// 13. Napisz program, który na podstawie wspó³czynników równania kwadratowego(a, b, c) sprawdzi, czy to równanie ma rozwi¹zania rzeczywiste, i jeœli tak, to je obliczy.
+/// </summary>
+void task13() {
+	Utills::Console::PrintHeader("Rownanie kwadratowe");
+
+	double a = Utills::Console::GetDoubleFromUser("Podaj a: ");
+	double b = Utills::Console::GetDoubleFromUser("Podaj b: ");
+	double c = Utills::Console::GetDoubleFromUser("Podaj c: ");
+
+
 }
 
 int main() {
@@ -301,7 +368,7 @@ int main() {
 	//system("pause");
 	//system("cls");
 
-	//task10();
+	task12();
 	//std::cout << std::endl;
 	//system("pause");
 	//system("cls");

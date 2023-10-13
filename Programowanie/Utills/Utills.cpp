@@ -42,7 +42,15 @@ std::string Utills::Console::GetStringFromUser(std::string message)
 
 void Utills::Console::PrintHeader(std::string message)
 {
-	std::cout << "==============================" << std::endl;;
+	for (int i = 0; i < message.length(); i++) {
+		std::cout << "=";
+	}
+	std::cout << std::endl;
+
 	std::cout << message << std::endl;
-	std::cout << "==============================" << std::endl;;
+
+	for (int i = 0; i < message.length(); i++) {
+		std::cout << "=";
+	}
+	std::cout << std::endl;
 }
