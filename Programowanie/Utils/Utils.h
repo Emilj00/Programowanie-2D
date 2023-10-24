@@ -2,11 +2,10 @@
 
 #include <string>
 
-
-static class Utills {
+class Utils {
 
 public:
-	static class Console {
+	class Console {
 
 	public:
 		static double GetDoubleFromUser(std::string message);
