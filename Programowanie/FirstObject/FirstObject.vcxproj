@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Bank.cpp" />
     <ClCompile Include="FirstObject.cpp" />
-    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Point3D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Point.h" />
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="Point3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
